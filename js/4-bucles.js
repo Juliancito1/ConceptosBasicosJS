@@ -25,4 +25,15 @@ do{
     contador++;
 }while(contador<=10)
 
-// for
+//for
+/*
+    for(let index=1; condicion logica; modificar la variable que controla la condicion)
+    {
+        //todo el codigo que necesite ejecutar varias veces
+    }
+*/
+
+for(let numeroImpar=1; numeroImpar<=10; numeroImpar+=2)
+{
+    document.write(`<p>Este es el parrafo generado con for N:${numeroImpar}</p>`)
+}
