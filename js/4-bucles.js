@@ -11,7 +11,18 @@ while(i<=10)
     //i++ es igual a i= i+1
 }
 
-// do while
+// do-while
+/*
+    do{
+        todas las lineas de codigo
+        cambiar la condicion logica
+    }while(condicion logica)
+*/
 
+let contador = 1
+do{
+    document.write(`<p>Este es el parrafo con do-while N:${contador}</p>`)
+    contador++;
+}while(contador<=10)
 
 // for
