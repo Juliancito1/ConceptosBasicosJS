@@ -7,10 +7,10 @@ let numeroCeldas = filas * columnas;
 
 document.write('<table><tbody>')
 for(let indiceFila = 0;indiceFila<filas;indiceFila++){
-    document.write(`
-        <tr>
-            <td>1</td>
-            <td>2</td>
-        </tr>`);
+    document.write('<tr>')
+    for(let indiceColumna=0;indiceColumna<columnas;indiceColumna++){
+    document.write(`<td>1</td>`);
+    }
+    document.write('</tr>');
 }
 document.write('</tbody> </table>')
