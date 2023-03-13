@@ -4,104 +4,55 @@ let colores = [];
 // crear un arreglo con valores
 let peliculas = ["Ant-man","Endgame", 2019, true];
 
+// Funcion para mostrar los datos del arreglo
+function mostrarPeliculas(titulo = 'No hay un titulo disponible'){
+    document.write(`<h2>${titulo}</h2>`)
+    document.write("<ul>")
+    for(let posicion = 0;posicion < peliculas.length;posicion++)
+    {
+        document.write(`<li>${peliculas[posicion]}</li>`)
+    }
+    document.write("</ul>")
+}
+
 //mostrar el arreglo
 document.write(peliculas)
 
 // recorrer el arreglo
 // length: devuelve la cantidad de elementos del arreglo
 //array.length
-
-document.write('<h2>Mostrar el arreglo de peliculas</h2>')
-document.write("<ul>")
-
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`)
-}
-document.write("</ul>")
-
+mostrarPeliculas('Mostrar el arreglo de peliculas');
 document.write(`<p>Cantidad de peliculas: ${peliculas.length}</p>`)
 
 // agregar un item al arreglo
-document.write('<h2>Agregar un item al principio del arreglo</h2>')
+mostrarPeliculas('Agregar un item al principio del arreglo')
+document.write('<h2></h2>')
 
+mostrarPeliculas('Agregar un item al final del arreglo')
 peliculas.unshift("Thor love and thunder","Iron Man")
-document.write("<ul>")
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`);
-}
-document.write("</ul>");
 
-document.write('<h2>Agregar un item al final del arreglo</h2>')
-
+mostrarPeliculas('Agregar un item en una posicion particular del arreglo')
 peliculas.push("Civil War");
 
-document.write("<ul>");
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`);
-}
-document.write("</ul>");
-
-document.write('<h2>Agregar un item en una posicion particular del arreglo(4)</h2>');
-
 peliculas.splice(4,0,"Spiderman: No Way Home");
-
-document.write("<ul>");
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`);
-}
-document.write("</ul>");
+mostrarPeliculas('Agregar un item en una posicion particular del arreglo')
 
 //modificar elementos del arreglo
-
-document.write('<h2>Modificar un elemento del arreglo (6)</h2>')
-
 peliculas[6] = "Doctor Strange";
-
-document.write("<ul>");
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`);
-}
-document.write("</ul>");
+mostrarPeliculas("Modificar un elemento del arreglo (6)")
 
 //Eliminar items del arreglo
-document.write('<h2>Eliminar el primer elemento del arreglo</h2>')
 
 peliculas.shift();
-
-document.write("<ul>");
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`);
-}
-document.write("</ul>");
-
-document.write('<h2>Eliminar el ultimo elemento del arreglo</h2>')
+mostrarPeliculas("Eliminar el primer elemento del arreglo");
 
 peliculas.pop();
-
-document.write("<ul>");
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`);
-}
-document.write("</ul>");
-
-document.write('<h2>Eliminar un elemento de una posicion particular del arreglo (4)</h2>')
+mostrarPeliculas("Eliminar el ultimo elemento del arreglo")
 
 peliculas.splice(4,1);
 //peliculas.splice(2,3);
+mostrarPeliculas("Eliminar un elemento de una posicion particular del arreglo (4)")
 
-document.write("<ul>");
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`);
-}
-document.write("</ul>");
 
 // OPERACIONES EXTRAS
 document.write("<h2>Operaciones extras</h2>")
@@ -118,15 +69,7 @@ document.write(`<p>¿Encontramos Endgame?: ${existeEndgame}</p>`)
 document.write(`<p>¿Encontramos Capitana Marvel?: ${peliculas.includes('Capitana Marvel') ? 'Si existe en nuestra lista de peliculas': 'No existe la pelicula en nuestra lista'}</p>`)
 
 // ordenar un arreglo
-
-document.write('<h2>Lista de peliculas ordenada</h2>')
-
 peliculas.unshift('antman')
 peliculas.sort();
 
-document.write("<ul>");
-for(let posicion = 0;posicion < peliculas.length;posicion++)
-{
-    document.write(`<li>${peliculas[posicion]}</li>`);
-}
-document.write("</ul>");
+mostrarPeliculas("Lista de peliculas ordenada")
