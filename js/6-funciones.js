@@ -42,3 +42,14 @@ saludar('Tadeo','Muñoz','Teo');
 
 
 // TODO Pedir a un usuario un nombre y precio de un juego, crear una funcion que informe el precio final en pesos argentinos. Preguntar si quiere saber el precio de otro juego
+
+const precioFinal = precio => (precio * 1.75).toFixed(2);
+
+do{
+const nombreJuego = prompt('Ingrese el nombre de tu juego');
+const precio = parseFloat(prompt('Ingrese el precio del juego'));
+
+console.log(precioFinal(precio));
+
+alert(`El juego ${nombreJuego} cuesta $${precioFinal(precio)} ARS (todos los impuestos incluidos)`);
+}while(confirm("¿Desea consultar otro juego?"))
