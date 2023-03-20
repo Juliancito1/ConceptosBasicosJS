@@ -87,8 +87,7 @@ document.write("</tbody></table>")
 }
 
 function filtrarTabla(){
-let texto = "Protector Solar"
-listaProductos.filter((texto) => listaProductos.nombreProducto);
+listaProductos.filter((listaProductos.includes("Protector")));
 document.write(
     `<table border><tbody>
     <td>Nombre</td>
