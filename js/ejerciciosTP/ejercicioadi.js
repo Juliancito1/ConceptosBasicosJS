@@ -86,21 +86,45 @@ document.write("</tr>")
 document.write("</tbody></table>")
 }
 
+let protectoresSolares = listaProductos.filter(producto => producto.nombreProducto.includes("Protector"));
+
 function filtrarTabla(){
-listaProductos.filter((listaProductos.includes("Protector")));
 document.write(
     `<table border><tbody>
     <td>Nombre</td>
     <td>Precio</td>
     <td>Categoria</td>`)
-for(let i = 0;i<listaProductos.length;i++)
+for(let i = 0;i<protectoresSolares.length;i++)
 {
     document.write("<tr>")
-    document.write(`<td>${listaProductos[i].nombreProducto}</td>`)
-    document.write(`<td>${listaProductos[i].precio}</td>`)
-    document.write(`<td>${listaProductos[i].categoria}</td>`)
+    document.write(`<td>${protectoresSolares[i].nombreProducto}</td>`)
+    document.write(`<td>${protectoresSolares[i].precio}</td>`)
+    document.write(`<td>${protectoresSolares[i].categoria}</td>`)
     document.write("</tr>")
 }
 document.write("</tr>")
 document.write("</tbody></table>")
+}
+
+let buscar = listaProductos.find(producto => producto.nombreProducto.includes('Sérum'));
+
+function buscarProducto()
+{
+  if(buscar)
+  {
+  document.write(
+    `<table border><tbody>
+    <td>Nombre</td>
+    <td>Precio</td>
+    <td>Categoria</td>`)
+    document.write("<tr>")
+  document.write(`<td>${buscar.nombreProducto}</td>`)
+  document.write(`<td>${buscar.precio}</td>`)
+  document.write(`<td>${buscar.categoria}</td>`)
+document.write("</tr>")
+document.write("</tbody></table>")
+  }
+  else{
+    document.write("El producto buscado no existe")
+  }
 }
